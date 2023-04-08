@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'style/main_style.dart';
+
 void main() {
   runApp(const MainRoute());
 }
@@ -15,9 +17,7 @@ class _MainRouteState extends State<MainRoute> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: theme,
       initialRoute: '/',
       routes: {
         '/': (context) => const Scaffold(

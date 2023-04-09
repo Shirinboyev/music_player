@@ -4,13 +4,9 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is music player app.
 
-A few resources to get you started if this is your first Flutter project:
+## Figma
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+[figma](https://www.figma.com/file/JL2cDly8l1JnODCq6120C4/Music-Player-UI-KIT%F0%9F%8E%A7?node-id=6%3A0&t=HqJcxlLWQkhTgAwk-1)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

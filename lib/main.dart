@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
-import 'style/main_style.dart';
+import './style/main_style.dart';
+
+import './screens/main_screen.dart';
+import './screens/playlist.dart';
+import './screens/playing.dart';
 
 void main() {
   runApp(const MainRoute());
@@ -20,21 +24,9 @@ class _MainRouteState extends State<MainRoute> {
       theme: theme,
       initialRoute: '/',
       routes: {
-        '/': (context) => const Scaffold(
-              body: Center(
-                child: Text('Home'),
-              ),
-            ),
-        '/playlist': (context) => const Scaffold(
-              body: Center(
-                child: Text('Second'),
-              ),
-            ),
-        '/playing': (context) => const Scaffold(
-              body: Center(
-                child: Text('Third'),
-              ),
-            ),
+        '/': (context) => const MainPage(),
+        '/playlist': (context) => const PlaylistPage(),
+        '/playing': (context) => const PlayingPage(),
       },
     );
   }

@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-class PlayListPage extends StatefulWidget {
-  const PlayListPage({super.key});
+import './constant.dart';
+
+class PlaylistPage extends StatefulWidget {
+  const PlaylistPage({super.key});
 
   @override
-  State<PlayListPage> createState() => _PlayListPageState();
+  State<PlaylistPage> createState() => _PlaylistPageState();
 }
 
-class _PlayListPageState extends State<PlayListPage> {
+class _PlaylistPageState extends State<PlaylistPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(),
-    );
+    return const Placeholder();
   }
 }

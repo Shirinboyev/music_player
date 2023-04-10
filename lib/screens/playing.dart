@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+
+import './constant.dart';
+
 class PlayingPage extends StatefulWidget {
   const PlayingPage({super.key});
 
@@ -9,8 +12,6 @@ class PlayingPage extends StatefulWidget {
 class _PlayingPageState extends State<PlayingPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(),
-    );
+    return const Placeholder();
   }
 }

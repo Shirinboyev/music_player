@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:music_player/screens/main_screen.dart';
-import 'package:music_player/screens/playing.dart';
-import 'package:music_player/screens/playlist.dart';
+
+import './style/main_style.dart';
+
+import './screens/main_screen.dart';
+import './screens/playlist.dart';
+import './screens/playing.dart';
+
 void main() {
   runApp(const MainRoute());
 }
@@ -14,23 +18,12 @@ class _MainRouteState extends State<MainRoute> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        appBarTheme: const AppBarTheme(
-        elevation: 0.0,
-        foregroundColor: Colors.black,
-        color: Colors.white,
-        titleTextStyle: TextStyle(
-          color: Colors.white,
-        )
-      ),
-        primarySwatch: Colors.blue,
-      ),
-      initialRoute: 'main_screen.dart',
+      theme: theme,
+      initialRoute: '/',
       routes: {
-        'main_screen.dart': (context) => const MainPage(),
-        '/Playing': (context) => const PlayingPage(),
-        '/Playlist': (context) => const PlayListPage(),
+        '/': (context) => const MainPage(),
+        '/playlist': (context) => const PlaylistPage(),
+        '/playing': (context) => const PlayingPage(),
       },
     );
   }

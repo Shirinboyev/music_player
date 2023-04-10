@@ -9,14 +9,11 @@ import './screens/playing.dart';
 void main() {
   runApp(const MainRoute());
 }
-
 class MainRoute extends StatefulWidget {
   const MainRoute({super.key});
-
   @override
   State<MainRoute> createState() => _MainRouteState();
 }
-
 class _MainRouteState extends State<MainRoute> {
   @override
   Widget build(BuildContext context) {

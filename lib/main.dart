@@ -9,19 +9,15 @@ import './screens/playing.dart';
 void main() {
   runApp(const MainRoute());
 }
-class MainRoute extends StatefulWidget {
+class MainRoute extends StatelessWidget {
   const MainRoute({super.key});
-  @override
-  State<MainRoute> createState() => _MainRouteState();
-}
-class _MainRouteState extends State<MainRoute> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       theme: theme,
-      initialRoute: '/',
+      initialRoute: 'mmm',
       routes: {
-        '/': (context) => const MainPage(),
+        'mmm': (context) => const MainPage(),
         '/playlist': (context) => const PlaylistPage(),
         '/playing': (context) => const PlayingPage(),
       },

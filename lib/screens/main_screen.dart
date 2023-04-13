@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
 
@@ -9,24 +10,15 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      drawer: Drawer(
-        child: Column(children: []),
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('Maasdfin Page'),
+        ),
+        body: const Center(
+          child: Text('Main wertewrtPage'),
+        ),
       ),
-      appBar: AppBar(
-        titleSpacing: 255,
-        title: Icon(Icons.search_rounded),
-      ),
-      backgroundColor: Colors.white,
-      body: Column(children: [
-        Expanded(
-          flex: 2,
-          child: 
-        ListView.builder(itemBuilder: (context, index) {
-          return Image.asset('images/music.png');
-        },)
-        )
-      ]),
     );
   }
 }

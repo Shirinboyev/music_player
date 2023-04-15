@@ -14,8 +14,9 @@ class MainRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       theme: theme,
-      initialRoute: 'mmm',
+      initialRoute: '/playing',
       routes: {
         'mmm': (context) => const MainPage(),
         '/playlist': (context) => const PlaylistPage(),

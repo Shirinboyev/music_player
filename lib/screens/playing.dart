@@ -44,16 +44,31 @@ class _PlayingPageState extends State<PlayingPage> {
                 child: CarouselSlider(
                   items: imageLIst
                       .map(
-                        (item) => Image.asset(
-                          item['image_path'],
-                          fit: BoxFit.cover,
-                          width: double.infinity,
-                        ),
-                      )
+                        (item) =>
+                           Padding(
+                             padding: const EdgeInsets.all(45),
+                             child: ClipRRect(
+                                       borderRadius: const BorderRadius.all(Radius.circular(20)),
+                                       child: Image.asset(
+                                         item['image_path'],
+                                         fit: BoxFit.cover,
+                                         width: double.infinity,
+                                         height: 200,
+                                         scale: 4,
+                                       ),
+                                     ),
+                           ), 
+                   // Image.asset(
+                        //   item['image_path'],
+                        //   fit: BoxFit.cover,
+                        //   width: double.infinity,
+                        )
+                      // )
                       .toList(),
                   options: CarouselOptions(
                     scrollPhysics: const BouncingScrollPhysics(),
-                    autoPlay: true,
+                    autoPlay: false,
+                    enableInfiniteScroll: true,
                     aspectRatio: 1,
                     viewportFraction: 1,
                     onPageChanged: (index, reason) {

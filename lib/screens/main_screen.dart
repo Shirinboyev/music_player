@@ -115,7 +115,7 @@ class _MainPageState extends State<MainPage> {
                         ),
                         Icon(
                           Icons.skip_previous_outlined,
-                          size: 35,
+                          size: 35
                         ),
                         Icon(
                           Icons.pause,

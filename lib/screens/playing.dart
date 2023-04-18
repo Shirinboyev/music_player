@@ -13,6 +13,7 @@ class PlayingPage extends StatefulWidget {
 }
 
 class _PlayingPageState extends State<PlayingPage> {
+  double _currentSliderValue = 0;
   final CarouselController carouselController = CarouselController();
   int currentIndex = 0;
   @override
@@ -77,7 +78,7 @@ class _PlayingPageState extends State<PlayingPage> {
                           );
                         },
                       ),
-                    ), 
+                    ),
                     Row(
                       children: [
                         Padding(
@@ -92,7 +93,7 @@ class _PlayingPageState extends State<PlayingPage> {
                                     color: Colors.black),
                               ),
                               Text(
-                                sami_music,
+                                'image_path',
                                 style:
                                     TextStyle(fontSize: 20, color: Colors.grey),
                               ),
@@ -112,6 +113,17 @@ class _PlayingPageState extends State<PlayingPage> {
                 ),
               ),
             ],
+          ),
+          Slider(
+            value: _currentSliderValue,
+            max: 100,
+            divisions: 100,
+            label: _currentSliderValue.round().toString(),
+            onChanged: (value) {
+              setState(() {
+                _currentSliderValue = value;
+              });
+            },
           ),
         ],
       ),

@@ -9,6 +9,7 @@ import './screens/playing.dart';
 void main() {
   runApp(const MainRoute());
 }
+
 class MainRoute extends StatelessWidget {
   const MainRoute({super.key});
   @override
@@ -16,9 +17,9 @@ class MainRoute extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: theme,
-      initialRoute: '/playing',
+      initialRoute: '/',
       routes: {
-        'mmm': (context) => const MainPage(),
+        '/': (context) => const MainPage(),
         '/playlist': (context) => const PlaylistPage(),
         '/playing': (context) => const PlayingPage(),
       },

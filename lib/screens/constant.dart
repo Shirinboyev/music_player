@@ -1,5 +1,6 @@
 // this is title name
 const String kTitle = 'Playing Now';
+const String my_playist = 'My Playist';
 const String recommended = '   Recommended for you';
 const String yusuf = 'Yusuf Eltoyev';
 const String rauf_faik = 'Rauf_Faik';
@@ -20,7 +21,10 @@ const String bahrom_music = 'Yomomn ekanda';
 const String bunyodbek_music = "Lo'ppi Lo'ppi";
 
 const List imageLIst = [
-  {"id": 1, "image_path": "images/sardor.png", },
+  {
+    "id": 1,
+    "image_path": "images/sardor.png",
+  },
   {"id": 2, "image_path": "images/bahrom.png"},
   {"id": 3, "image_path": "images/ozodbek.png"},
   {"id": 4, "image_path": "images/osman.png"},

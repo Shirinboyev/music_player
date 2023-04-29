@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import './style/main_style.dart';
-
 import './screens/main_screen.dart';
 import './screens/playlist.dart';
 import './screens/playing.dart';
@@ -18,7 +16,7 @@ class MainRoute extends StatelessWidget {
       theme: theme,
       initialRoute: '/playing',
       routes: {
-        'mmm': (context) => const MainPage(),
+        '/': (context) => const MainPage(),
         '/playlist': (context) => const PlaylistPage(),
         '/playing': (context) => const PlayingPage(),
       },

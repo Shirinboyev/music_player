@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import '/style/color.dart';
 import '/functions/main_music.dart';
 import 'constant.dart';
-import 'constant.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -61,6 +60,16 @@ class _MainPageState extends State<MainPage> {
                   ],
                 ),
               ),
+              Row(
+                children:const [
+                   Text(
+                    my_playist,
+                    style: TextStyle(
+                      fontSize: 23,
+                    ),
+                  ),
+                ],
+              ),
               Expanded(
                 flex: 4,
                 child: ListView(
@@ -95,7 +104,7 @@ class _MainPageState extends State<MainPage> {
                       },
                     ),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         Image.asset('images/sardor.png', scale: 7),
                         Column(
@@ -113,17 +122,26 @@ class _MainPageState extends State<MainPage> {
                             ),
                           ],
                         ),
-                        Icon(
-                          Icons.skip_previous_outlined,
-                          size: 35
+                        IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.skip_previous_outlined,
+                            size: 35,
+                          ),
                         ),
-                        Icon(
-                          Icons.pause,
-                          size: 35,
+                        IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.pause,
+                            size: 35,
+                          ),
                         ),
-                        Icon(
-                          Icons.skip_next_outlined,
-                          size: 35,
+                        IconButton(
+                          onPressed: () {},
+                          icon: const Icon(
+                            Icons.skip_next_outlined,
+                            size: 35,
+                          ),
                         ),
                       ],
                     ),

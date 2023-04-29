@@ -36,84 +36,85 @@ class _PlayingPageState extends State<PlayingPage> {
           ),
         ),
       ),
-      body: Column(
+      body: ListView(
+        scrollDirection: Axis.horizontal,
         children: [
-          Stack(
-            children: [
-              InkWell(
-                onTap: () {},
-                child: Column(
-                  children: [
-                    CarouselSlider(
-                      items: imageLIst
-                          .map(
-                            (item) => Padding(
-                              padding: const EdgeInsets.all(45),
-                              child: ClipRRect(
-                                borderRadius: const BorderRadius.all(
-                                  Radius.circular(20),
-                                ),
-                                child: Image.asset(
-                                  item['image_path'],
-                                  fit: BoxFit.cover,
-                                  width: double.infinity,
-                                  height: 200,
-                                  scale: 4,
-                                ),
-                              ),
-                            ),
-                          )
-                          .toList(),
-                      options: CarouselOptions(
-                        scrollPhysics: const BouncingScrollPhysics(),
-                        autoPlay: false,
-                        enableInfiniteScroll: true,
-                        aspectRatio: 1,
-                        viewportFraction: 1,
-                        onPageChanged: (index, reason) {
-                          setState(
-                            () {
-                              currentIndex = index;
-                            },
-                          );
-                        },
-                      ),
-                    ),
-                    Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(left: 110),
-                          child: Column(
-                            children: const [
-                              Text(
-                                sami,
-                                style: TextStyle(
-                                    fontSize: 20,
-                                    fontWeight: FontWeight.bold,
-                                    color: Colors.black),
-                              ),
-                              Text(
-                                'image_path',
-                                style:
-                                    TextStyle(fontSize: 20, color: Colors.grey),
-                              ),
-                            ],
-                          ),
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 50),
-                          child: IconButton(
-                            onPressed: () {},
-                            icon: Icon(Icons.favorite_outline),
-                          ),
-                        )
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-            ],
-          ),
+          // Stack(
+          //   children: [
+          //     InkWell(
+          //       onTap: () {},
+          //       child: Column(
+          //         children: [
+          //           CarouselSlider(
+          //             items: imageLIst
+          //                 .map(
+          //                   (item) => Padding(
+          //                     padding: const EdgeInsets.all(45),
+          //                     child: ClipRRect(
+          //                       borderRadius: const BorderRadius.all(
+          //                         Radius.circular(20),
+          //                       ),
+          //                       child: Image.asset(
+          //                         item['image_path'],
+          //                         fit: BoxFit.cover,
+          //                         width: double.infinity,
+          //                         height: 200,
+          //                         scale: 4,
+          //                       ),
+          //                     ),
+          //                   ),
+          //                 )
+          //                 .toList(),
+          //             options: CarouselOptions(
+          //               scrollPhysics: const BouncingScrollPhysics(),
+          //               autoPlay: false,
+          //               enableInfiniteScroll: true,
+          //               aspectRatio: 1,
+          //               viewportFraction: 1,
+          //               onPageChanged: (index, reason) {
+          //                 setState(
+          //                   () {
+          //                     currentIndex = index;
+          //                   },
+          //                 );
+          //               },
+          //             ),
+          //           ),
+          //           Row(
+          //             children: [
+          //               Padding(
+          //                 padding: const EdgeInsets.only(left: 110),
+          //                 child: Column(
+          //                   children: const [
+          //                     Text(
+          //                       sami,
+          //                       style: TextStyle(
+          //                           fontSize: 20,
+          //                           fontWeight: FontWeight.bold,
+          //                           color: Colors.black),
+          //                     ),
+          //                     Text(
+          //                       'image_path',
+          //                       style:
+          //                           TextStyle(fontSize: 20, color: Colors.grey),
+          //                     ),
+          //                   ],
+          //                 ),
+          //               ),
+          //               Padding(
+          //                 padding: const EdgeInsets.only(left: 50),
+          //                 child: IconButton(
+          //                   onPressed: () {},
+          //                   icon: Icon(Icons.favorite_outline),
+          //                 ),
+          //               )
+          //             ],
+          //           ),
+          //         ],
+          //       ),
+          //     ),
+          //   ],
+          // ),
           Slider(
             value: _currentSliderValue,
             max: 100,

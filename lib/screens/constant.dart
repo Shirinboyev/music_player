@@ -21,25 +21,14 @@ const String bahrom_music = 'Yomomn ekanda';
 const String bunyodbek_music = "Lo'ppi Lo'ppi";
 
 const List imageLIst = [
-  {
-    "id": 1,
-    "image_path": "images/sardor.png",
-  },
-  {"id": 2, "image_path": "images/bahrom.png"},
-  {"id": 3, "image_path": "images/ozodbek.png"},
-  {"id": 4, "image_path": "images/osman.png"},
-  {"id": 5, "image_path": "images/rauf_faik.png"},
-  {"id": 6, "image_path": "images/sami_yusuf.png"},
-  {"id": 7, "image_path": "images/yusuf.png"},
-  {"id": 8, "image_path": "images/bunyodbek.png"},
-  // {"id": 9, "text_path": "Sardor"},
-  // {"id": 10, "text_path": "Bahrom"},
-  // {"id": 11, "text_path": "Ozodbek"},
-  // {"id": 12, "text_path": "Osman"},
-  // {"id": 13, "text_path": "Rauf vs Faik"},
-  // {"id": 14, "text_path": "Sami Yusuf"},
-  // {"id": 15, "text_path": "Yusuf"},
-  // {"id": 16, "text_path": "Bunyodbek"},
+  {"id": 1, "image_path": "images/sardor.png", "artist": "Sardor Tairov"},
+  {"id": 2, "image_path": "images/bahrom.png", "artist": "Bahrom Nazarov"},
+  {"id": 3, "image_path": "images/ozodbek.png", "artist": "Ozodbek Nazarbekov"},
+  {"id": 4, "image_path": "images/osman.png", "artist": "Osman Navruzov"},
+  {"id": 5, "image_path": "images/rauf_faik.png", "artist": "Rauf vs Faik"},
+  {"id": 6, "image_path": "images/sami_yusuf.png", "artist": "Sami Yusuf"},
+  {"id": 7, "image_path": "images/yusuf.png", "artist": "Yusuf Eltoyev"},
+  {"id": 8, "image_path": "images/bunyodbek.png", "artist": "Bunyodbek Saidov"},
 ];
 int currentIndex = 0;
 // const List textLIst = [

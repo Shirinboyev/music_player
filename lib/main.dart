@@ -7,6 +7,7 @@ import './screens/playing.dart';
 void main() {
   runApp(const MainRoute());
 }
+
 class MainRoute extends StatelessWidget {
   const MainRoute({super.key});
   @override

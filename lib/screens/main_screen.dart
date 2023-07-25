@@ -16,53 +16,43 @@ class _MainPageState extends State<MainPage> {
       debugShowCheckedModeBanner: false,
       color: red,
       home: Scaffold(
-          drawer: const Drawer(),
-          appBar: AppBar(
-            iconTheme: const IconThemeData(color: black),
-            backgroundColor: white,
-            elevation: 0.0,
-            titleSpacing: 250,
-            title: const Icon(
-              Icons.search_rounded,
-              color: black,
-            ),
+        drawer: const Drawer(),
+        appBar: AppBar(
+          iconTheme: const IconThemeData(color: black),
+          backgroundColor: white,
+          elevation: 0.0,
+          titleSpacing: 250,
+          title: const Icon(
+            Icons.search_rounded,
+            color: black,
           ),
-          body: Column(
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(4.0),
+          child: Column(
             children: [
-              const SizedBox(
-                height: 20,
+              // const SizedBox(height: 20),
+              const Text(recommended, style: TextStyle(fontSize: 23)),
+              const SizedBox(height: 20),
+              Expanded(
+                flex: 4,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemCount: imageLIst.length,
+                  itemBuilder: (context, index) {
+                    return mainFunction(
+                      imageLIst[index]['artist'],
+                      imageLIst[index]['artist'],
+                      imageLIst[index]['image_path'],
+                      size: 160,
+                    );
+                  },
+                ),
               ),
+        
               Row(
                 children: const [
                   Text(
-                    recommended,
-                    style: TextStyle(fontSize: 23),
-                  ),
-                ],
-              ),
-              const SizedBox(
-                height: 20,
-              ),
-              Expanded(
-                flex: 4,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: [
-                    mainFunction(osman_music, osman, 'images/osman.png',
-                        size: 160),
-                    mainFunction(sami_music, sami, 'images/sami_yusuf.png',
-                        size: 160),
-                    mainFunction(
-                        bunyodbek_music, bunyodbek, 'images/bunyodbek.png',
-                        size: 160),
-                    mainFunction(sardor_music, sardor, 'images/sardor.png',
-                        size: 160),
-                  ],
-                ),
-              ),
-              Row(
-                children:const [
-                   Text(
                     my_playist,
                     style: TextStyle(
                       fontSize: 23,
@@ -149,7 +139,9 @@ class _MainPageState extends State<MainPage> {
                 ),
               ),
             ],
-          )),
+          ),
+        ),
+      ),
     );
   }
 }
